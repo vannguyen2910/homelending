@@ -202,6 +202,33 @@ table.cmp td:first-child { font-weight: 600; font-size: 11px; }
 .flow-d { font-size: 12px; color: var(--muted); line-height: 1.5; }
 .flow-tag { display: inline-block; margin-top: 10px; font-size: 10px; font-weight: 700; padding: 3px 10px; border-radius: 20px; letter-spacing: .04em; }
 
+/* ─── AD-HOC / MID-APPLICATION SECTION ─── */
+.adh-section { margin: 0 0 48px; }
+.adh-intro { font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 24px; padding: 16px 20px; background: var(--surf); border: 1px solid var(--border); border-radius: var(--r); }
+.adh-intro strong { color: var(--text); }
+.adh-triggers { margin-bottom: 28px; }
+.adh-triggers-lbl { font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+.trigger-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+.trig-chip { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 20px; font-size: 11px; font-weight: 600; border: 1px solid; }
+.adh-flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 28px; }
+.adh-step { background: var(--surf); border: 1px solid var(--border); border-radius: var(--r); padding: 18px 16px; position: relative; }
+.adh-step::after { content: '→'; position: absolute; right: -12px; top: 50%; transform: translateY(-50%); font-size: 16px; color: var(--border); font-weight: 700; z-index: 2; }
+.adh-step:last-child::after { display: none; }
+.adh-step-n { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; opacity: .5; margin-bottom: 6px; }
+.adh-step-t { font-size: 12px; font-weight: 700; margin-bottom: 5px; line-height: 1.3; }
+.adh-step-d { font-size: 11px; color: var(--muted); line-height: 1.5; }
+.adh-step-tag { display: inline-block; margin-top: 8px; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 10px; }
+.adh-screens { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 20px; }
+.adh-verdict { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 8px; }
+.adh-verdict .ins-card { margin: 0; }
+.adh-sep { height: 1px; background: var(--border); margin: 32px 0; }
+@media (max-width: 900px) {
+  .adh-flow { grid-template-columns: 1fr 1fr; }
+  .adh-step::after { display: none; }
+  .adh-screens { grid-template-columns: 1fr; }
+  .adh-verdict { grid-template-columns: 1fr; }
+}
+
 /* ─── REAL SCREENSHOTS SECTION ─── */
 .real-shots { margin: 0 0 40px; }
 .real-shots-intro { font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 20px; }
@@ -224,6 +251,51 @@ table.cmp td:first-child { font-weight: 600; font-size: 11px; }
 /* ─── DISCLAIMER / FOOTNOTE ─── */
 .footnote { margin-top: 60px; padding-top: 22px; border-top: 1px solid var(--border); font-size: 11px; color: #A0A09A; line-height: 1.9; }
 
+/* ─── IN-FLIGHT SUPPORT ─── */
+.support-intro { background: var(--surf); border: 1px solid var(--border); border-radius: var(--r); padding: 24px 28px; margin-bottom: 36px; }
+.support-intro p { font-size: 13px; color: var(--muted); line-height: 1.8; max-width: 780px; }
+.support-intro p + p { margin-top: 10px; }
+.support-intro strong { color: var(--text); }
+.bank-support-block { margin-bottom: 48px; }
+.bank-support-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 14px; border-bottom: 2px solid var(--border); }
+.bank-support-logo { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 900; color: #fff; flex-shrink: 0; }
+.bank-support-title { font-family: 'DM Serif Display', serif; font-size: 22px; }
+.bank-support-subtitle { font-size: 12px; color: var(--muted); }
+.channel-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 20px; }
+.channel-card { background: var(--surf); border: 1px solid var(--border); border-radius: var(--r); padding: 16px; }
+.channel-icon { font-size: 20px; margin-bottom: 8px; }
+.channel-name { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 4px; }
+.channel-avail { font-size: 10px; color: var(--muted); margin-bottom: 8px; }
+.channel-detail { font-size: 11px; color: var(--text); line-height: 1.6; }
+.channel-tag { display: inline-block; margin-top: 8px; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 20px; }
+.tag-best { background: #E8F5E9; color: #2E7D32; }
+.tag-ok { background: #FFF8DC; color: #92700A; }
+.tag-gap { background: #FFEBEE; color: #C62828; }
+.tag-unique { background: #E3F2FD; color: #1565C0; }
+.journey-table { width: 100%; border-collapse: collapse; font-size: 12px; margin-bottom: 20px; }
+.journey-table th { background: #F5F3EE; padding: 10px 14px; text-align: left; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); border-bottom: 2px solid var(--border); }
+.journey-table td { padding: 11px 14px; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.55; }
+.journey-table tr:last-child td { border-bottom: none; }
+.journey-table tr:hover td { background: #FAFAF8; }
+.td-stage { font-weight: 700; font-size: 11px; }
+.cell-good { color: #2E7D32; }
+.cell-mid { color: #92700A; }
+.cell-gap { color: #C62828; }
+.pain-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 28px; }
+.pain-card { background: var(--surf); border: 1px solid var(--border); border-radius: var(--r); padding: 20px; }
+.pain-bank { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 10px; }
+.pain-list { list-style: none; }
+.pain-list li { font-size: 12px; color: var(--muted); padding: 5px 0; border-bottom: 1px solid var(--border); line-height: 1.5; }
+.pain-list li:last-child { border-bottom: none; }
+.pain-list li::before { content: '⚡ '; font-size: 10px; }
+.opp-support-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 40px; }
+.verdict-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 36px; }
+.verdict-card { background: var(--surf); border: 1px solid var(--border); border-radius: var(--r); padding: 18px; text-align: center; }
+.verdict-score { font-size: 36px; font-weight: 900; line-height: 1; }
+.verdict-label { font-size: 10px; color: var(--muted); margin-top: 4px; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; }
+.verdict-bank { font-size: 12px; font-weight: 800; margin-bottom: 8px; }
+.verdict-best { font-size: 11px; color: var(--muted); line-height: 1.5; margin-top: 6px; }
+
 /* ─── FAB ─── */
 .fab { position: fixed; bottom: 28px; right: 28px; background: var(--text); color: #fff; padding: 10px 18px; border-radius: 30px; font-size: 12px; font-weight: 700; cursor: pointer; box-shadow: 0 4px 20px rgba(0,0,0,.2); z-index: 300; opacity: 0; transition: opacity .3s; user-select: none; }
 .fab.vis { opacity: 1; }
@@ -232,10 +304,12 @@ table.cmp td:first-child { font-weight: 600; font-size: 11px; }
   .site-header, .page { padding-left: 24px; padding-right: 24px; }
   .bank-nav { padding: 0 16px; }
   .hero-row, .two-col, .rat-grid, .screens-grid { grid-template-columns: 1fr; }
-  .opp-grid, .flow-grid { grid-template-columns: 1fr 1fr; }
+  .opp-grid, .flow-grid, .opp-support-grid { grid-template-columns: 1fr 1fr; }
   .screens-grid { grid-template-columns: 1fr 1fr; }
-  .shots-grid { grid-template-columns: 1fr; }
+  .shots-grid, .pain-grid { grid-template-columns: 1fr; }
   .wide-shot { grid-column: span 1; }
+  .channel-grid { grid-template-columns: 1fr 1fr; }
+  .verdict-row { grid-template-columns: 1fr 1fr; }
 }
 </style>
 </head>
@@ -261,6 +335,7 @@ table.cmp td:first-child { font-weight: 600; font-size: 11px; }
   <div class="tab" data-b="wbc" onclick="sw('wbc')">🔴 Westpac</div>
   <div class="tab" data-b="nab" onclick="sw('nab')">🔴 NAB</div>
   <div class="tab" data-b="all" onclick="sw('all')">⚖️ Compare All</div>
+  <div class="tab" data-b="support" onclick="sw('support')">💬 In-Flight Support</div>
 </nav>
 
 <div class="page">
@@ -481,7 +556,206 @@ table.cmp td:first-child { font-weight: 600; font-size: 11px; }
 
   </div><!-- /screens-grid -->
 
-  <h3 class="sh"><span class="sh-tag">02</span> Real Product Screenshots</h3>
+  <h3 class="sh"><span class="sh-tag">02</span> Mid-Application: Ad-Hoc Requests & Back-Office Follow-Up</h3>
+  <div class="adh-section">
+    <div class="adh-intro">
+      During a home loan application, the bank's credit assessor may identify gaps or need verification on specific items. How this is communicated back to the customer — and how they respond — varies significantly across the Big 4. This section covers the <strong>customer experience of receiving and acting on ad-hoc requests</strong>: additional documents, clarification questions, property conditions, account nomination, contract upload, and more.
+    </div>
+
+    <div class="adh-triggers">
+      <div class="adh-triggers-lbl">Common Triggers for Mid-Application Requests</div>
+      <div class="trigger-chips">
+        <span class="trig-chip" style="background:#FFF8DC;border-color:#E8C800;color:#7A5800;">📄 Additional payslip / income proof</span>
+        <span class="trig-chip" style="background:#E3F2FD;border-color:#1565C0;color:#1565C0;">🏠 Property valuation shortfall</span>
+        <span class="trig-chip" style="background:#E8F5E9;border-color:#2E7D32;color:#2E7D32;">💳 Nominate repayment account</span>
+        <span class="trig-chip" style="background:#FCE4EC;border-color:#AD1457;color:#AD1457;">📋 Contract of Sale upload</span>
+        <span class="trig-chip" style="background:#F3E5F5;border-color:#6A1B9A;color:#6A1B9A;">✍️ Clarify credit history item</span>
+        <span class="trig-chip" style="background:#FFF3E0;border-color:#E65100;color:#E65100;">🏗️ Builder's insurance / council plans</span>
+        <span class="trig-chip" style="background:#E0F7FA;border-color:#00695C;color:#00695C;">🧾 Lease agreement (rental income)</span>
+        <span class="trig-chip" style="background:#FAFAFA;border-color:#616161;color:#616161;">👥 Co-borrower identity verification</span>
+      </div>
+    </div>
+
+    <p style="font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;">CommBank — Ad-Hoc Request Flow</p>
+
+    <div class="adh-flow">
+      <div class="adh-step">
+        <div class="adh-step-n">Step 1</div>
+        <div class="adh-step-t">🔔 Push Notification</div>
+        <div class="adh-step-d">Customer receives push, SMS, or email: "Action needed on your home loan application." No inline context on reason yet.</div>
+        <div class="adh-step-tag" style="background:#FFF8DC;color:#92700A;">Push + SMS + Email</div>
+      </div>
+      <div class="adh-step">
+        <div class="adh-step-n">Step 2</div>
+        <div class="adh-step-t">📍 App Tracker — Action Banner</div>
+        <div class="adh-step-d">Inside App Tracker, a red/orange banner shows the outstanding item — e.g. "Upload pay slips" or "Upload contract of sale." Status shown as blocked.</div>
+        <div class="adh-step-tag" style="background:#FCE4EC;color:#AD1457;">Visual Alert</div>
+      </div>
+      <div class="adh-step">
+        <div class="adh-step-n">Step 3</div>
+        <div class="adh-step-t">📤 In-App Document Upload</div>
+        <div class="adh-step-d">Customer uploads directly via Buy a Home. Camera, files, or photo supported. Per-document status updates to "Received" immediately on upload.</div>
+        <div class="adh-step-tag" style="background:#E8F5E9;color:#2E7D32;">Best-in-class</div>
+      </div>
+      <div class="adh-step">
+        <div class="adh-step-n">Step 4</div>
+        <div class="adh-step-t">✅ Status Confirmed</div>
+        <div class="adh-step-d">Lender reviews upload. Status returns to "In Progress." If further items needed, new action appears. Push notification sent when confirmed.</div>
+        <div class="adh-step-tag" style="background:#E3F2FD;color:#1565C0;">Real-time</div>
+      </div>
+    </div>
+
+    <!-- CommBank Ad-Hoc Screens -->
+    <div class="adh-screens screens-grid" style="grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:20px;">
+
+      <!-- Screen 1: Action required notification -->
+      <div class="phone-wrap">
+        <div class="phone-frame cba-frame">
+          <div class="notch"></div>
+          <div class="screen-content" style="background:#F5F7FA;">
+            <div style="background:var(--cba);padding:14px 16px 10px;color:#000;">
+              <div style="display:flex;align-items:center;justify-content:space-between;">
+                <div style="font-size:11px;font-weight:800;">CommBank</div>
+                <div style="font-size:10px;font-weight:700;">9:41 AM</div>
+              </div>
+              <div style="font-size:13px;font-weight:800;margin-top:8px;line-height:1.2;">Buy a Home</div>
+              <div style="font-size:10px;margin-top:2px;opacity:.7;">Application status tracker</div>
+            </div>
+            <div style="padding:14px;">
+              <!-- Alert banner -->
+              <div style="background:#FFF3CD;border:1px solid #FFC107;border-radius:8px;padding:10px 12px;margin-bottom:12px;display:flex;gap:8px;align-items:flex-start;">
+                <span style="font-size:16px;">⚠️</span>
+                <div>
+                  <div style="font-size:11px;font-weight:800;color:#7A5800;">Action Required</div>
+                  <div style="font-size:10px;color:#7A5800;margin-top:2px;line-height:1.4;">We need 2 more documents to progress your application.</div>
+                </div>
+              </div>
+              <!-- Document items -->
+              <div style="font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;">Documents Needed</div>
+              <div style="background:#fff;border:1px solid #FFD0D0;border-radius:8px;padding:10px 12px;margin-bottom:8px;">
+                <div style="display:flex;align-items:center;gap:8px;">
+                  <div style="width:28px;height:28px;background:#FCE4EC;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;">📄</div>
+                  <div style="flex:1;">
+                    <div style="font-size:11px;font-weight:700;color:var(--text);">Most recent payslip</div>
+                    <div style="font-size:10px;color:#E53935;">● Required · Tap to upload</div>
+                  </div>
+                  <span style="font-size:16px;">›</span>
+                </div>
+              </div>
+              <div style="background:#fff;border:1px solid #FFD0D0;border-radius:8px;padding:10px 12px;margin-bottom:12px;">
+                <div style="display:flex;align-items:center;gap:8px;">
+                  <div style="width:28px;height:28px;background:#FCE4EC;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;">🏠</div>
+                  <div style="flex:1;">
+                    <div style="font-size:11px;font-weight:700;color:var(--text);">Contract of Sale</div>
+                    <div style="font-size:10px;color:#E53935;">● Required · Tap to upload</div>
+                  </div>
+                  <span style="font-size:16px;">›</span>
+                </div>
+              </div>
+              <div style="background:var(--cba);border-radius:8px;padding:10px;text-align:center;font-size:11px;font-weight:800;color:#000;">Upload Documents Now</div>
+              <div style="margin-top:10px;text-align:center;">
+                <div style="font-size:10px;color:var(--muted);">Chat with a specialist ›</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="phone-caption">Action Required State<br><span style="font-size:10px;color:var(--muted);">Push notification + in-app alert</span></div>
+        <div class="phone-source">Reconstructed from commbank.com.au/home-loans</div>
+      </div>
+
+      <!-- Screen 2: Upload flow -->
+      <div class="phone-wrap">
+        <div class="phone-frame cba-frame">
+          <div class="notch"></div>
+          <div class="screen-content" style="background:#F5F7FA;">
+            <div style="background:var(--cba);padding:14px 16px 10px;color:#000;">
+              <div style="font-size:11px;opacity:.7;">‹ Back to Tracker</div>
+              <div style="font-size:13px;font-weight:800;margin-top:4px;">Upload Document</div>
+              <div style="font-size:10px;opacity:.7;">Most recent payslip</div>
+            </div>
+            <div style="padding:14px;">
+              <div style="background:#E8F5E9;border-radius:8px;padding:12px;text-align:center;margin-bottom:14px;">
+                <div style="font-size:24px;margin-bottom:4px;">📸</div>
+                <div style="font-size:11px;font-weight:700;color:#2E7D32;">Tap to take a photo or upload file</div>
+                <div style="font-size:10px;color:#2E7D32;margin-top:3px;">PDF, JPG or PNG · Max 10MB</div>
+              </div>
+              <div style="font-size:10px;font-weight:700;color:var(--muted);margin-bottom:8px;text-transform:uppercase;letter-spacing:.04em;">Tips</div>
+              <div style="background:#fff;border:1px solid var(--border);border-radius:8px;padding:10px 12px;font-size:10px;color:var(--muted);line-height:1.6;">
+                ✓ Ensure all 4 corners are visible<br>
+                ✓ Include name, employer & date<br>
+                ✓ Year-to-date figure must be visible<br>
+                ✓ No older than 60 days
+              </div>
+              <div style="background:var(--cba);border-radius:8px;padding:10px;text-align:center;font-size:11px;font-weight:800;color:#000;margin-top:14px;">Choose Photo or File</div>
+              <div style="background:#fff;border:1px solid var(--border);border-radius:8px;padding:10px;text-align:center;font-size:11px;font-weight:700;color:var(--text);margin-top:8px;">Ask a Specialist Instead</div>
+            </div>
+          </div>
+        </div>
+        <div class="phone-caption">Document Upload Flow<br><span style="font-size:10px;color:var(--muted);">With context-aware guidance per document type</span></div>
+        <div class="phone-source">Reconstructed from commbank.com.au App Tracker experience</div>
+      </div>
+
+      <!-- Screen 3: Confirmation + Account Nomination -->
+      <div class="phone-wrap">
+        <div class="phone-frame cba-frame">
+          <div class="notch"></div>
+          <div class="screen-content" style="background:#F5F7FA;">
+            <div style="background:var(--cba);padding:14px 16px 10px;color:#000;">
+              <div style="font-size:11px;opacity:.7;">Buy a Home</div>
+              <div style="font-size:13px;font-weight:800;margin-top:4px;">Nominate Repayment Account</div>
+            </div>
+            <div style="padding:14px;">
+              <div style="background:#E8F5E9;border:1px solid #66BB6A;border-radius:8px;padding:10px 12px;margin-bottom:12px;display:flex;gap:8px;align-items:center;">
+                <span style="font-size:16px;">✅</span>
+                <div style="font-size:10px;font-weight:700;color:#2E7D32;line-height:1.4;">Documents uploaded and received. Your application is progressing.</div>
+              </div>
+              <!-- Account nomination -->
+              <div style="font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;">Nominate Direct Debit Account</div>
+              <div style="background:#fff;border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:8px;">
+                <div style="padding:10px 12px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;">
+                  <div>
+                    <div style="font-size:11px;font-weight:700;">Smart Access ••3421</div>
+                    <div style="font-size:10px;color:var(--muted);">CommBank · $4,280 avail</div>
+                  </div>
+                  <div style="width:16px;height:16px;border-radius:50%;border:2px solid var(--cba);background:var(--cba);display:flex;align-items:center;justify-content:center;font-size:9px;">✓</div>
+                </div>
+                <div style="padding:10px 12px;display:flex;justify-content:space-between;align-items:center;">
+                  <div>
+                    <div style="font-size:11px;font-weight:700;">NetBank Saver ••9871</div>
+                    <div style="font-size:10px;color:var(--muted);">CommBank · $22,140 avail</div>
+                  </div>
+                  <div style="width:16px;height:16px;border-radius:50%;border:2px solid var(--border);"></div>
+                </div>
+              </div>
+              <div style="font-size:10px;color:var(--muted);margin-bottom:14px;line-height:1.5;">Repayments will be debited from this account each month. You can change this after settlement.</div>
+              <div style="background:var(--cba);border-radius:8px;padding:10px;text-align:center;font-size:11px;font-weight:800;color:#000;">Confirm Account Selection</div>
+            </div>
+          </div>
+        </div>
+        <div class="phone-caption">Document Confirmed + Account Nomination<br><span style="font-size:10px;color:var(--muted);">Inline repayment account setup — prefilled with CommBank accounts</span></div>
+        <div class="phone-source">Reconstructed from commbank.com.au App Tracker experience</div>
+      </div>
+
+    </div>
+
+    <div class="adh-verdict">
+      <div class="ins-card"><h4>✅ CommBank Ad-Hoc Strengths</h4><ul class="ins-list str">
+        <li>Push + SMS + email trio means customers rarely miss requests</li>
+        <li>Per-document status updates immediately on upload — closes the loop fast</li>
+        <li>Inline account nomination prefilled with existing CommBank accounts</li>
+        <li>App Tracker blocks progress visually until item is resolved — clear call-to-action</li>
+        <li>6-hour contract review SLA (95% of the time) for uploaded contracts</li>
+      </ul></div>
+      <div class="ins-card"><h4>⚠️ CommBank Ad-Hoc Gaps</h4><ul class="ins-list gap">
+        <li>No SLA shown to customer ("we'll review within X days") — creates anxiety</li>
+        <li>Broker-originated apps: ad-hoc requests may fall to broker, not customer app</li>
+        <li>No explanation of <em>why</em> the document is needed — just a label</li>
+        <li>Non-CommBank account nomination requires separate PDF direct debit form</li>
+      </ul></div>
+    </div>
+  </div>
+
+  <h3 class="sh"><span class="sh-tag">03</span> Real Product Screenshots</h3>
   <div class="real-shots">
     <p class="real-shots-intro">These are <strong>official images published by CommBank</strong> on their public product pages — showing the real visual design and UX of the CommBank App and Buy a Home hub.</p>
     <div class="shots-grid">
@@ -510,7 +784,7 @@ table.cmp td:first-child { font-weight: 600; font-size: 11px; }
     </div>
   </div>
 
-  <h3 class="sh"><span class="sh-tag">03</span> Flow Map</h3>
+  <h3 class="sh"><span class="sh-tag">04</span> Flow Map</h3>
   <div class="flow-grid">
     <div class="flow-step"><div class="flow-num" style="background:var(--cba);color:#000;">1</div><div class="flow-t">Buy a Home Hub Entry</div><div class="flow-d">Dashboard tile → Buy a Home section. Property search, calculators, guides all unified in one hub.</div><span class="flow-tag" style="background:#FFF8DC;color:#92700A;">App Home Tile</span></div>
     <div class="flow-step"><div class="flow-num" style="background:var(--cba);color:#000;">2</div><div class="flow-t">Conditional Pre-Approval</div><div class="flow-d">10-minute application. ID check via physical document in-app. Conditional approval if eligible, instantly.</div><span class="flow-tag" style="background:#FFF8DC;color:#92700A;">~10 min</span></div>
@@ -723,7 +997,194 @@ table.cmp td:first-child { font-weight: 600; font-size: 11px; }
 
   </div>
 
-  <h3 class="sh"><span class="sh-tag">02</span> Real Product Screenshots</h3>
+  <h3 class="sh"><span class="sh-tag">02</span> Mid-Application: Ad-Hoc Requests & Back-Office Follow-Up</h3>
+  <div class="adh-section">
+    <div class="adh-intro">ANZ Plus is radically different here: because income, identity, and credit data are <strong>fully automated</strong>, ad-hoc mid-application requests are extremely rare by design. The system auto-verifies most cases — and when something <em>does</em> require follow-up, the ANZ Plus Coaches handle it via in-app chat or call, without requiring document uploads. If additional information <em>is</em> needed, the app prompts the customer inline with clear instructions.</div>
+
+    <div class="adh-triggers">
+      <div class="adh-triggers-lbl">When ANZ Plus Still Needs More Info</div>
+      <div class="trigger-chips">
+        <span class="trig-chip" style="background:#E3F2FD;border-color:#1565C0;color:#1565C0;">🤖 Edge case income not auto-parsed</span>
+        <span class="trig-chip" style="background:#E8F5E9;border-color:#2E7D32;color:#2E7D32;">💳 Nominate ANZ Plus Everyday account for repayments</span>
+        <span class="trig-chip" style="background:#F3E5F5;border-color:#6A1B9A;color:#6A1B9A;">✍️ eSign loan documents in-app</span>
+        <span class="trig-chip" style="background:#FFF3E0;border-color:#E65100;color:#E65100;">📹 Coach video call for complex query</span>
+        <span class="trig-chip" style="background:#FAFAFA;border-color:#616161;color:#616161;">👥 Joint applicant — partner completes on their own phone</span>
+      </div>
+    </div>
+
+    <p style="font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;">ANZ Plus — Ad-Hoc Request Flow</p>
+
+    <div class="adh-flow">
+      <div class="adh-step">
+        <div class="adh-step-n">Step 1</div>
+        <div class="adh-step-t">🔔 In-App Notification</div>
+        <div class="adh-step-d">ANZ Plus sends an in-app push notification: "Action needed — tap to see details." No email/SMS by default; app-first design.</div>
+        <div class="adh-step-tag" style="background:#E3F2FD;color:#1565C0;">App-native</div>
+      </div>
+      <div class="adh-step">
+        <div class="adh-step-n">Step 2</div>
+        <div class="adh-step-t">📲 Inline Prompt with Context</div>
+        <div class="adh-step-d">The application screen shows the specific item needed, with a plain-language explanation and a "Get Help" button linking to a Coach if needed.</div>
+        <div class="adh-step-tag" style="background:#E8F5E9;color:#2E7D32;">Best context clarity</div>
+      </div>
+      <div class="adh-step">
+        <div class="adh-step-n">Step 3</div>
+        <div class="adh-step-t">💬 Coach Resolution</div>
+        <div class="adh-step-d">For most cases, the ANZ Plus Coach can resolve the item in-app via chat, phone, or video call — without requiring a document upload from the customer.</div>
+        <div class="adh-step-tag" style="background:#F3E5F5;color:#6A1B9A;">Human-assisted</div>
+      </div>
+      <div class="adh-step">
+        <div class="adh-step-n">Step 4</div>
+        <div class="adh-step-t">✅ Auto-Progressed</div>
+        <div class="adh-step-d">Once condition satisfied, the workflow engine (Temporal) automatically progresses to the next step. Customer sees loan docs ready to sign in seconds.</div>
+        <div class="adh-step-tag" style="background:#FFF8DC;color:#92700A;">Temporal engine</div>
+      </div>
+    </div>
+
+    <div class="adh-screens screens-grid" style="grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:20px;">
+
+      <!-- ANZ Screen 1: In-app condition prompt -->
+      <div class="phone-wrap">
+        <div class="phone-frame">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="phone-status" style="background:var(--anz);color:#fff;"><span>9:41</span><span>●●●</span></div>
+            <div class="app-body" style="background:#F8FAFB;">
+              <div class="app-nav" style="background:#fff;border-bottom:1px solid #F0F0F0;">
+                <span style="font-size:11px;color:var(--anz);">‹ Loans</span>
+                <span style="font-size:12px;font-weight:800;">Your Application</span>
+                <span style="font-size:18px;color:var(--anz);">?</span>
+              </div>
+              <div class="app-scroll">
+                <div class="ui-card" style="border:1px solid #BBDEFB;background:#E3F2FD;">
+                  <div style="font-size:11px;font-weight:800;color:var(--anz);">📋 One thing to check</div>
+                  <div style="font-size:10px;color:#1565C0;margin-top:4px;line-height:1.5;">We need to confirm your rental income from the investment property. A Coach can help you sort this in a few minutes.</div>
+                  <div style="margin-top:8px;display:flex;gap:8px;">
+                    <div style="background:var(--anz);color:#fff;border-radius:6px;padding:6px 10px;font-size:10px;font-weight:700;text-align:center;flex:1;">Chat with Coach</div>
+                    <div style="background:#fff;border:1px solid var(--anz);color:var(--anz);border-radius:6px;padding:6px 10px;font-size:10px;font-weight:700;text-align:center;flex:1;">Call a Coach</div>
+                  </div>
+                </div>
+                <div class="ui-card">
+                  <div class="ui-label">Application Progress</div>
+                  <div class="progress-track"><div class="progress-fill" style="width:60%;background:var(--anz);"></div></div>
+                  <ul class="step-list" style="margin-top:8px;">
+                    <li class="step-item"><div class="step-icon done">✓</div><span>Selfie ID Verified</span></li>
+                    <li class="step-item"><div class="step-icon done">✓</div><span>Income Auto-Assessed</span></li>
+                    <li class="step-item"><div class="step-icon curr" style="background:#E3F2FD;color:var(--anz);">!</div><span style="font-weight:700;color:var(--anz);">Rental income — confirm</span></li>
+                    <li class="step-item"><div class="step-icon pend">○</div><span>Sign Loan Docs</span></li>
+                    <li class="step-item"><div class="step-icon pend">○</div><span>Settlement</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="phone-caption">Inline Condition Prompt<br><span style="font-size:10px;color:var(--muted);">Plain language + Coach access in-context</span></div>
+        <div class="phone-source">Reconstructed from anz.com.au/plus/digital-home-loans</div>
+      </div>
+
+      <!-- ANZ Screen 2: Coach chat mid-application -->
+      <div class="phone-wrap">
+        <div class="phone-frame">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="phone-status" style="background:var(--anz);color:#fff;"><span>9:41</span><span>●●●</span></div>
+            <div class="app-body" style="background:#F8FAFB;">
+              <div class="app-nav" style="background:#fff;border-bottom:1px solid #F0F0F0;">
+                <span style="font-size:11px;color:var(--anz);">‹ Back</span>
+                <span style="font-size:12px;font-weight:800;">Coach — Sarah</span>
+                <span style="font-size:9px;color:#2E7D32;font-weight:700;">● Online</span>
+              </div>
+              <div class="app-scroll" style="padding:0;">
+                <div style="padding:12px;display:flex;flex-direction:column;gap:8px;">
+                  <!-- Chat bubbles -->
+                  <div style="background:#E3F2FD;border-radius:12px 12px 12px 2px;padding:8px 10px;max-width:85%;">
+                    <div style="font-size:10px;font-weight:700;color:var(--anz);margin-bottom:3px;">Sarah · Coach</div>
+                    <div style="font-size:10px;color:#333;line-height:1.4;">Hi! I can see your application is paused on the rental income step. Do you have a current lease agreement or recent bank statements showing rental credits?</div>
+                  </div>
+                  <div style="background:var(--anz);border-radius:12px 12px 2px 12px;padding:8px 10px;max-width:85%;align-self:flex-end;">
+                    <div style="font-size:10px;color:#fff;line-height:1.4;">Yes I have both. Is a lease agreement enough?</div>
+                  </div>
+                  <div style="background:#E3F2FD;border-radius:12px 12px 12px 2px;padding:8px 10px;max-width:85%;">
+                    <div style="font-size:10px;font-weight:700;color:var(--anz);margin-bottom:3px;">Sarah · Coach</div>
+                    <div style="font-size:10px;color:#333;line-height:1.4;">Yes! A current signed lease agreement is perfect. Our system will verify it automatically — no manual upload needed. Just confirm the rental address and I'll update the application now.</div>
+                  </div>
+                  <div style="background:#E8F5E9;border:1px solid #A5D6A7;border-radius:8px;padding:8px 10px;font-size:10px;color:#2E7D32;font-weight:700;text-align:center;">✅ Application updated — progressing now</div>
+                </div>
+                <div style="background:#fff;border-top:1px solid #F0F0F0;padding:8px 12px;display:flex;gap:6px;align-items:center;">
+                  <div style="flex:1;background:#F5F7FA;border-radius:16px;padding:7px 10px;font-size:10px;color:var(--muted);">Type a message…</div>
+                  <div style="background:var(--anz);border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:12px;color:#fff;">↑</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="phone-caption">Coach Chat — Condition Resolution<br><span style="font-size:10px;color:var(--muted);">Human-assisted, no upload required in many cases</span></div>
+        <div class="phone-source">Reconstructed from anz.com.au/plus/support/home-loans</div>
+      </div>
+
+      <!-- ANZ Screen 3: Account nomination + eSign -->
+      <div class="phone-wrap">
+        <div class="phone-frame">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="phone-status" style="background:var(--anz);color:#fff;"><span>9:41</span><span>●●●</span></div>
+            <div class="app-body" style="background:#F8FAFB;">
+              <div class="app-nav" style="background:#fff;border-bottom:1px solid #F0F0F0;">
+                <span style="font-size:11px;color:var(--anz);">‹ Back</span>
+                <span style="font-size:12px;font-weight:800;">Set Up Your Loan</span>
+                <span></span>
+              </div>
+              <div class="app-scroll">
+                <div class="ui-card" style="background:#E8F5E9;border:1px solid #A5D6A7;">
+                  <div style="font-size:11px;font-weight:800;color:#2E7D32;">🎉 Application Approved!</div>
+                  <div style="font-size:10px;color:#388E3C;margin-top:3px;">Complete 2 final steps to activate your loan</div>
+                </div>
+                <div class="ui-card">
+                  <div class="ui-label">Step 1 — Nominate Account</div>
+                  <div style="font-size:10px;color:var(--muted);margin-bottom:8px;">Your repayments will be debited from your ANZ Plus Everyday account.</div>
+                  <div style="background:#F0F7FF;border:1px solid #BBDEFB;border-radius:8px;padding:8px 10px;display:flex;justify-content:space-between;align-items:center;">
+                    <div>
+                      <div style="font-size:10px;font-weight:700;">ANZ Plus Everyday ••4521</div>
+                      <div style="font-size:10px;color:var(--muted);">$6,440 available</div>
+                    </div>
+                    <div style="background:var(--anz);color:#fff;border-radius:6px;padding:3px 8px;font-size:9px;font-weight:700;">Selected ✓</div>
+                  </div>
+                </div>
+                <div class="ui-card">
+                  <div class="ui-label">Step 2 — eSign Loan Documents</div>
+                  <div style="font-size:10px;color:var(--muted);margin-bottom:8px;">Documents written in plain language. Review and sign digitally — takes about 3 minutes.</div>
+                  <div style="background:var(--anz);border-radius:8px;padding:9px;text-align:center;font-size:10px;font-weight:800;color:#fff;">Review &amp; Sign Documents →</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="phone-caption">Post-Approval: Account Nomination + eSign<br><span style="font-size:10px;color:var(--muted);">ANZ Plus Everyday auto-selected; docs signed in-app</span></div>
+        <div class="phone-source">Reconstructed from anz.com.au/plus/support/home-loans</div>
+      </div>
+
+    </div>
+
+    <div class="adh-verdict">
+      <div class="ins-card"><h4>✅ ANZ Plus Ad-Hoc Strengths</h4><ul class="ins-list str">
+        <li>By design, almost zero ad-hoc requests — income, ID, expenses are all auto-verified</li>
+        <li>When edge cases arise, Coaches resolve them conversationally without document uploads</li>
+        <li>In-app condition prompts use plain language — no jargon or compliance-speak</li>
+        <li>Account nomination is automatic — ANZ Plus Everyday is pre-selected, no form needed</li>
+        <li>eSign happens in seconds, documents are written in plain language</li>
+        <li>Joint applicant — both parties complete on their own phones, simultaneously</li>
+      </ul></div>
+      <div class="ins-card"><h4>⚠️ ANZ Plus Ad-Hoc Gaps</h4><ul class="ins-list gap">
+        <li>If edge case is complex (e.g. sole trader income), ANZ Plus cannot handle it — applicant must use legacy ANZ channel</li>
+        <li>No support for non-ANZ Plus accounts as repayment account nomination</li>
+        <li>Coach availability limited to business hours for phone/video — chat available more broadly</li>
+        <li>Notifications are app-only — users who dismiss notifications may not see condition prompts</li>
+      </ul></div>
+    </div>
+  </div>
+
+  <h3 class="sh"><span class="sh-tag">03</span> Real Product Screenshots</h3>
   <div class="real-shots">
     <p class="real-shots-intro">These are <strong>official images published by ANZ Plus</strong> on anz.com.au/plus/digital-home-loans — showing the actual ANZ Plus app UI, home loan product screens, offset feature and Coach support experience.</p>
     <div class="shots-grid">
@@ -796,7 +1257,7 @@ table.cmp td:first-child { font-weight: 600; font-size: 11px; }
     </div>
   </div>
 
-  <h3 class="sh"><span class="sh-tag">03</span> Flow Map</h3>
+  <h3 class="sh"><span class="sh-tag">04</span> Flow Map</h3>
   <div class="flow-grid">
     <div class="flow-step"><div class="flow-num" style="background:var(--anz);">1</div><div class="flow-t">Eligibility + AVM</div><div class="flow-d">Tap Loans tab → property value displayed upfront via AVM. Same valuation used in credit decision — no surprises.</div><span class="flow-tag" style="background:#E3F2FD;color:var(--anz);">Instant AVM</span></div>
     <div class="flow-step"><div class="flow-num" style="background:var(--anz);">2</div><div class="flow-t">Selfie ID Verification</div><div class="flow-d">Passport or driver's licence + selfie. In-app biometric verification in minutes. Fully paperless, no branch required.</div><span class="flow-tag" style="background:#E3F2FD;color:var(--anz);">Biometric</span></div>
@@ -1006,7 +1467,189 @@ table.cmp td:first-child { font-weight: 600; font-size: 11px; }
 
   </div>
 
-  <h3 class="sh"><span class="sh-tag">02</span> Real Product Screenshots</h3>
+  <h3 class="sh"><span class="sh-tag">02</span> Mid-Application: Ad-Hoc Requests & Back-Office Follow-Up</h3>
+  <div class="adh-section">
+    <div class="adh-intro">Westpac's ad-hoc experience is <strong>split across channels</strong>: the digital application portal handles document uploads and co-borrower workflows, while follow-up for outstanding conditions is primarily via <strong>phone and email</strong> from the assigned loan specialist — not proactively surfaced in the Westpac App. Customers with a Westpac account can nominate it for repayments online; non-Westpac accounts require a printed Direct Debit form.</div>
+
+    <div class="adh-triggers">
+      <div class="adh-triggers-lbl">Common Westpac Mid-Application Triggers</div>
+      <div class="trigger-chips">
+        <span class="trig-chip" style="background:#FFF8DC;border-color:#E8C800;color:#7A5800;">📄 Additional income documents</span>
+        <span class="trig-chip" style="background:#E3F2FD;border-color:#1565C0;color:#1565C0;">🏠 Valuation shortfall — bank negotiation</span>
+        <span class="trig-chip" style="background:#E8F5E9;border-color:#2E7D32;color:#2E7D32;">💳 Nominate repayment account (Westpac or other)</span>
+        <span class="trig-chip" style="background:#FCE4EC;border-color:#AD1457;color:#AD1457;">📋 Contract of Sale / Plans upload via portal</span>
+        <span class="trig-chip" style="background:#FAFAFA;border-color:#616161;color:#616161;">👥 Third party nominated to provide documents</span>
+        <span class="trig-chip" style="background:#FFF3E0;border-color:#E65100;color:#E65100;">🧾 Co-borrower separately signs into digital application</span>
+      </div>
+    </div>
+
+    <p style="font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;">Westpac — Ad-Hoc Request Flow</p>
+
+    <div class="adh-flow">
+      <div class="adh-step">
+        <div class="adh-step-n">Step 1</div>
+        <div class="adh-step-t">📞 Phone/Email from Specialist</div>
+        <div class="adh-step-d">Loan specialist contacts customer within 2 business days if further information is required. No in-app push notification triggered.</div>
+        <div class="adh-step-tag" style="background:#FFF8DC;color:#92700A;">Phone + Email only</div>
+      </div>
+      <div class="adh-step">
+        <div class="adh-step-n">Step 2</div>
+        <div class="adh-step-t">🌐 Portal Upload / Third-Party Nominate</div>
+        <div class="adh-step-d">Customer uploads to web portal (hlc1.westpac.com.au). Can also nominate accountant or broker to submit directly. Multiple co-borrowers each sign in separately.</div>
+        <div class="adh-step-tag" style="background:#E3F2FD;color:#1565C0;">Web portal</div>
+      </div>
+      <div class="adh-step">
+        <div class="adh-step-n">Step 3</div>
+        <div class="adh-step-t">✍️ eSign via Westpac Live</div>
+        <div class="adh-step-d">Loan pack issued digitally via Westpac Live (online banking). eSign available — praised by brokers for speed. Physical doc fallback for edge cases.</div>
+        <div class="adh-step-tag" style="background:#E8F5E9;color:#2E7D32;">eSign strong</div>
+      </div>
+      <div class="adh-step">
+        <div class="adh-step-n">Step 4</div>
+        <div class="adh-step-t">💳 Account Nomination (Westpac or Other)</div>
+        <div class="adh-step-d">Westpac account: setup via app or online banking. Non-Westpac: requires PDF Direct Debit Request form submitted to bank. Not digitally integrated.</div>
+        <div class="adh-step-tag" style="background:#FCE4EC;color:#AD1457;">PDF form for external</div>
+      </div>
+    </div>
+
+    <div class="adh-screens screens-grid" style="grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:20px;">
+
+      <!-- Westpac Screen 1: Application portal outstanding items -->
+      <div class="phone-wrap">
+        <div class="phone-frame wbc-frame" style="--fclr:var(--wbc);">
+          <div class="notch"></div>
+          <div class="screen-content" style="background:#F5F7FA;">
+            <div style="background:var(--wbc);padding:14px 16px 10px;color:#fff;">
+              <div style="display:flex;align-items:center;justify-content:space-between;">
+                <div style="font-size:11px;font-weight:800;">Westpac</div>
+                <div style="font-size:10px;font-weight:700;">9:41 AM</div>
+              </div>
+              <div style="font-size:13px;font-weight:800;margin-top:8px;line-height:1.2;">Home Loan Application</div>
+              <div style="font-size:10px;margin-top:2px;opacity:.8;">hlc1.westpac.com.au</div>
+            </div>
+            <div style="padding:14px;">
+              <div style="background:#FFF3E0;border:1px solid #FFB300;border-radius:8px;padding:10px 12px;margin-bottom:12px;">
+                <div style="font-size:11px;font-weight:800;color:#E65100;">📞 Your specialist called</div>
+                <div style="font-size:10px;color:#BF360C;margin-top:3px;line-height:1.4;">Your application requires 2 additional items. Log in to upload or contact your specialist.</div>
+              </div>
+              <div style="font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;">Outstanding Items</div>
+              <div style="background:#fff;border:1px solid #FFB300;border-radius:8px;padding:10px 12px;margin-bottom:8px;">
+                <div style="font-size:11px;font-weight:700;color:var(--text);">Latest group certificate / NOA</div>
+                <div style="font-size:10px;color:#E65100;margin-top:2px;">● Pending upload · Tap to upload</div>
+              </div>
+              <div style="background:#fff;border:1px solid #FFB300;border-radius:8px;padding:10px 12px;margin-bottom:12px;">
+                <div style="font-size:11px;font-weight:700;color:var(--text);">Council-approved building plans</div>
+                <div style="font-size:10px;color:#E65100;margin-top:2px;">● Pending · You may nominate third party</div>
+              </div>
+              <div style="font-size:10px;color:var(--muted);margin-bottom:8px;line-height:1.5;">You can also nominate your accountant or conveyancer to provide documents on your behalf.</div>
+              <div style="background:var(--wbc);border-radius:8px;padding:9px;text-align:center;font-size:11px;font-weight:800;color:#fff;">Upload Documents</div>
+            </div>
+          </div>
+        </div>
+        <div class="phone-caption">Outstanding Items — Web Portal<br><span style="font-size:10px;color:var(--muted);">Triggered by specialist phone call, not push notification</span></div>
+        <div class="phone-source">Reconstructed from westpac.com.au/retrieve-application + broker forums</div>
+      </div>
+
+      <!-- Westpac Screen 2: Third party nomination -->
+      <div class="phone-wrap">
+        <div class="phone-frame wbc-frame" style="--fclr:var(--wbc);">
+          <div class="notch"></div>
+          <div class="screen-content" style="background:#F5F7FA;">
+            <div style="background:var(--wbc);padding:14px 16px 10px;color:#fff;">
+              <div style="font-size:11px;opacity:.7;">‹ Outstanding Items</div>
+              <div style="font-size:13px;font-weight:800;margin-top:4px;">Nominate Document Provider</div>
+            </div>
+            <div style="padding:14px;">
+              <div style="font-size:10px;color:var(--muted);margin-bottom:12px;line-height:1.5;">You may nominate an accountant, broker, or other authorised party to submit documents on your behalf. They will be contacted directly via email.</div>
+              <div style="background:#fff;border:1px solid var(--border);border-radius:8px;padding:12px;margin-bottom:10px;">
+                <div style="font-size:10px;font-weight:700;color:var(--text);margin-bottom:6px;">Document: Council-approved plans</div>
+                <div style="font-size:10px;color:var(--muted);margin-bottom:6px;">Nominate who should provide this</div>
+                <div style="display:flex;flex-direction:column;gap:6px;">
+                  <div style="background:#F5F7FA;border:1px solid var(--border);border-radius:6px;padding:7px 10px;display:flex;align-items:center;gap:6px;">
+                    <div style="width:14px;height:14px;border-radius:50%;border:2px solid var(--wbc);background:var(--wbc);flex-shrink:0;"></div>
+                    <div style="font-size:10px;font-weight:700;">My conveyancer / solicitor</div>
+                  </div>
+                  <div style="background:#fff;border:1px solid var(--border);border-radius:6px;padding:7px 10px;display:flex;align-items:center;gap:6px;">
+                    <div style="width:14px;height:14px;border-radius:50%;border:2px solid var(--border);flex-shrink:0;"></div>
+                    <div style="font-size:10px;font-weight:700;">My accountant</div>
+                  </div>
+                  <div style="background:#fff;border:1px solid var(--border);border-radius:6px;padding:7px 10px;display:flex;align-items:center;gap:6px;">
+                    <div style="width:14px;height:14px;border-radius:50%;border:2px solid var(--border);flex-shrink:0;"></div>
+                    <div style="font-size:10px;font-weight:700;">I'll upload it myself</div>
+                  </div>
+                </div>
+              </div>
+              <div style="background:var(--wbc);border-radius:8px;padding:9px;text-align:center;font-size:11px;font-weight:800;color:#fff;">Send Notification to Third Party</div>
+            </div>
+          </div>
+        </div>
+        <div class="phone-caption">Third-Party Document Nomination<br><span style="font-size:10px;color:var(--muted);">Unique: can delegate document collection to authorised third party</span></div>
+        <div class="phone-source">Reconstructed from westpac.com.au/retrieve-application</div>
+      </div>
+
+      <!-- Westpac Screen 3: Account nomination — non-Westpac friction -->
+      <div class="phone-wrap">
+        <div class="phone-frame wbc-frame" style="--fclr:var(--wbc);">
+          <div class="notch"></div>
+          <div class="screen-content" style="background:#F5F7FA;">
+            <div style="background:var(--wbc);padding:14px 16px 10px;color:#fff;">
+              <div style="font-size:11px;opacity:.7;">Westpac App</div>
+              <div style="font-size:13px;font-weight:800;margin-top:4px;">Set Up Repayments</div>
+            </div>
+            <div style="padding:14px;">
+              <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-bottom:8px;">Choose Account to Debit</div>
+              <!-- Westpac account -->
+              <div style="background:#fff;border:1px solid #66BB6A;border-radius:8px;padding:10px 12px;margin-bottom:8px;">
+                <div style="display:flex;align-items:center;justify-content:space-between;">
+                  <div>
+                    <div style="font-size:11px;font-weight:700;">Westpac Choice ••5621</div>
+                    <div style="font-size:10px;color:var(--muted);">$3,840 available · Instant setup</div>
+                  </div>
+                  <div style="background:#E8F5E9;color:#2E7D32;border-radius:6px;padding:3px 8px;font-size:9px;font-weight:700;">Westpac ✓</div>
+                </div>
+              </div>
+              <!-- Non-Westpac -->
+              <div style="background:#fff;border:1px solid #FFB300;border-radius:8px;padding:10px 12px;margin-bottom:12px;">
+                <div style="display:flex;align-items:center;justify-content:space-between;">
+                  <div>
+                    <div style="font-size:11px;font-weight:700;">Other bank account</div>
+                    <div style="font-size:10px;color:#E65100;">Requires PDF Direct Debit form</div>
+                  </div>
+                  <div style="background:#FFF3E0;color:#E65100;border-radius:6px;padding:3px 8px;font-size:9px;font-weight:700;">Paper form</div>
+                </div>
+              </div>
+              <div style="background:#FFF8DC;border:1px solid #FFD54F;border-radius:8px;padding:10px;font-size:10px;color:#7A5800;line-height:1.5;margin-bottom:12px;">
+                ⚠️ To use a non-Westpac account, you'll need to download, complete and submit a <strong>Direct Debit Request form</strong> via PDF or visit a branch.
+              </div>
+              <div style="background:var(--wbc);border-radius:8px;padding:9px;text-align:center;font-size:11px;font-weight:800;color:#fff;">Use Westpac Choice ••5621</div>
+            </div>
+          </div>
+        </div>
+        <div class="phone-caption">Account Nomination — Westpac vs Other<br><span style="font-size:10px;color:var(--muted);">Non-Westpac accounts require a PDF Direct Debit form</span></div>
+        <div class="phone-source">Reconstructed from westpac.com.au/manage-home-loan</div>
+      </div>
+
+    </div>
+
+    <div class="adh-verdict">
+      <div class="ins-card"><h4>✅ Westpac Ad-Hoc Strengths</h4><ul class="ins-list str">
+        <li>Third-party document nomination is unique — accountant/broker can submit docs directly</li>
+        <li>Dedicated loan specialist assigned from application through settlement — consistent human point of contact</li>
+        <li>eSign via Westpac Live is fast and broker-praised for low friction</li>
+        <li>Co-borrowers each sign in to complete their section independently — well-handled</li>
+        <li>Application portal (hlc1) shows uploaded document status per item</li>
+      </ul></div>
+      <div class="ins-card"><h4>⚠️ Westpac Ad-Hoc Gaps</h4><ul class="ins-list gap">
+        <li>No in-app push notifications for ad-hoc requests — relies on phone call from specialist, which creates missed-contact risk</li>
+        <li>Application tracker is a separate web portal, not the Westpac App — customers must know to check it</li>
+        <li>Non-Westpac account nomination requires a PDF Direct Debit form — significant digital friction</li>
+        <li>No SLA communicated for how quickly the bank will review uploaded documents</li>
+        <li>Complex applications have suffered multi-week delays per customer reports (Whirlpool)</li>
+      </ul></div>
+    </div>
+  </div>
+
+  <h3 class="sh"><span class="sh-tag">03</span> Real Product Screenshots</h3>
   <div class="real-shots">
     <p class="real-shots-intro">These are <strong>official images published by Westpac</strong> on their public product pages — showing the Westpac App's home loan management UI, offset calculator, and visual design language.</p>
     <div class="shots-grid">
@@ -1243,7 +1886,195 @@ table.cmp td:first-child { font-weight: 600; font-size: 11px; }
 
   </div>
 
-  <h3 class="sh"><span class="sh-tag">02</span> Real Product Screenshots</h3>
+  <h3 class="sh"><span class="sh-tag">02</span> Mid-Application: Ad-Hoc Requests & Back-Office Follow-Up</h3>
+  <div class="adh-section">
+    <div class="adh-intro">NAB's mid-application experience is <strong>split between NAB Direct and ubank</strong>. NAB Direct relies on the customer's banker and online portal for follow-up — similar to Westpac's model. ubank, as a digital-first product, has a more streamlined in-app approach with the 2024 real-time tracker launch. Both channels support in-app chat for queries, but the depth of guidance around outstanding conditions varies significantly.</div>
+
+    <div class="adh-triggers">
+      <div class="adh-triggers-lbl">Common NAB Mid-Application Triggers</div>
+      <div class="trigger-chips">
+        <span class="trig-chip" style="background:#FFF8DC;border-color:#E8C800;color:#7A5800;">📄 Additional bank statements / payslips</span>
+        <span class="trig-chip" style="background:#E3F2FD;border-color:#1565C0;color:#1565C0;">🏠 Property condition / valuation query</span>
+        <span class="trig-chip" style="background:#E8F5E9;border-color:#2E7D32;color:#2E7D32;">💳 Nominate repayment account</span>
+        <span class="trig-chip" style="background:#FCE4EC;border-color:#AD1457;color:#AD1457;">📋 Contract of Sale upload via portal</span>
+        <span class="trig-chip" style="background:#F3E5F5;border-color:#6A1B9A;color:#6A1B9A;">✍️ Clarify employment or expense entry</span>
+        <span class="trig-chip" style="background:#FAFAFA;border-color:#616161;color:#616161;">👥 Co-borrower action — separate contact required</span>
+        <span class="trig-chip" style="background:#FFF3E0;border-color:#E65100;color:#E65100;">🧾 Lease / rental income evidence</span>
+      </div>
+    </div>
+
+    <p style="font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;">NAB — Ad-Hoc Request Flow (Direct Channel)</p>
+
+    <div class="adh-flow">
+      <div class="adh-step">
+        <div class="adh-step-n">Step 1</div>
+        <div class="adh-step-t">📧 Email / SMS from NAB Banker</div>
+        <div class="adh-step-d">Customer receives email or SMS: "Your banker has requested more information." NAB banker contacts within 2 business days of reviewing application.</div>
+        <div class="adh-step-tag" style="background:#FFF8DC;color:#92700A;">Email + SMS</div>
+      </div>
+      <div class="adh-step">
+        <div class="adh-step-n">Step 2</div>
+        <div class="adh-step-t">🌐 Online Portal Upload</div>
+        <div class="adh-step-d">Customer logs into NAB's online portal with NAB ID + SMS code. Uploads documents. Status is less clearly surfaced vs CommBank — item completion not immediately confirmed.</div>
+        <div class="adh-step-tag" style="background:#E3F2FD;color:#1565C0;">Web portal</div>
+      </div>
+      <div class="adh-step">
+        <div class="adh-step-n">Step 3</div>
+        <div class="adh-step-t">💬 In-App Chat Support</div>
+        <div class="adh-step-d">Customer can message NAB via in-app chat (Mon–Fri 8am–7pm, Sat–Sun 9am–6pm) or ask banker to call. Chat supports "speak to a person" command.</div>
+        <div class="adh-step-tag" style="background:#E8F5E9;color:#2E7D32;">In-app chat</div>
+      </div>
+      <div class="adh-step">
+        <div class="adh-step-n">Step 4</div>
+        <div class="adh-step-t">✅ Banker Progresses</div>
+        <div class="adh-step-d">NAB banker reviews and progresses application manually. Customer may receive update via email or see status change in online portal. NAB App notifications limited.</div>
+        <div class="adh-step-tag" style="background:#FCE4EC;color:#AD1457;">Manual review</div>
+      </div>
+    </div>
+
+    <div class="adh-screens screens-grid" style="grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:20px;">
+
+      <!-- NAB Screen 1: Email triggered + portal login -->
+      <div class="phone-wrap">
+        <div class="phone-frame" style="--fclr:#E4002B;">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="phone-status" style="background:#fff;color:#000;border-bottom:1px solid #F0F0F0;"><span>9:41</span><span>●●●</span></div>
+            <div class="app-body" style="background:#F5F5F5;">
+              <!-- NAB internet banking web portal header -->
+              <div style="background:#E4002B;padding:10px 14px;color:#fff;flex-shrink:0;">
+                <div style="font-size:10px;font-weight:800;">NAB Internet Banking</div>
+                <div style="font-size:11px;font-weight:700;margin-top:4px;">Home Loan Application</div>
+              </div>
+              <div style="padding:12px;overflow-y:auto;flex:1;">
+                <div style="background:#FFF3E0;border:1px solid #FFB300;border-radius:8px;padding:10px 12px;margin-bottom:10px;">
+                  <div style="font-size:10px;font-weight:800;color:#E65100;">📧 Your banker sent a request</div>
+                  <div style="font-size:10px;color:#BF360C;margin-top:3px;line-height:1.4;">Additional documents are needed to progress your application. Please upload within 30 days or your application will expire.</div>
+                </div>
+                <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:#666;margin-bottom:8px;">Requested Items</div>
+                <div style="background:#fff;border:1px solid #FFB300;border-radius:6px;padding:10px 12px;margin-bottom:6px;display:flex;align-items:center;gap:8px;">
+                  <div style="font-size:16px;">📄</div>
+                  <div>
+                    <div style="font-size:10px;font-weight:700;color:#333;">3 months bank statements</div>
+                    <div style="font-size:10px;color:#E65100;">● Required</div>
+                  </div>
+                </div>
+                <div style="background:#fff;border:1px solid #FFB300;border-radius:6px;padding:10px 12px;margin-bottom:10px;display:flex;align-items:center;gap:8px;">
+                  <div style="font-size:16px;">🧾</div>
+                  <div>
+                    <div style="font-size:10px;font-weight:700;color:#333;">Signed lease agreement</div>
+                    <div style="font-size:10px;color:#E65100;">● Required</div>
+                  </div>
+                </div>
+                <div style="background:#E4002B;border-radius:6px;padding:8px;text-align:center;font-size:10px;font-weight:800;color:#fff;">Upload Documents</div>
+                <div style="margin-top:8px;text-align:center;font-size:10px;color:#666;">30 days remaining to complete</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="phone-caption">Outstanding Items — NAB Portal<br><span style="font-size:10px;color:var(--muted);">Triggered by email/SMS — 30-day window to respond</span></div>
+        <div class="phone-source">Reconstructed from nab.com.au application process guide</div>
+      </div>
+
+      <!-- NAB Screen 2: In-app chat for mid-application query -->
+      <div class="phone-wrap">
+        <div class="phone-frame" style="--fclr:#E4002B;">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="phone-status" style="background:#E4002B;color:#fff;"><span>9:41</span><span>●●●</span></div>
+            <div class="app-body" style="background:#F5F5F5;">
+              <div style="background:#E4002B;padding:10px 14px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;">
+                <div style="font-size:11px;font-weight:800;color:#fff;">Message Us</div>
+                <div style="font-size:9px;color:rgba(255,255,255,.8);">Mon–Fri 8am–7pm</div>
+              </div>
+              <div style="flex:1;overflow-y:auto;padding:12px;display:flex;flex-direction:column;gap:8px;">
+                <div style="background:#fff;border-radius:10px 10px 10px 2px;padding:8px 10px;max-width:85%;border:1px solid #EEE;">
+                  <div style="font-size:9px;font-weight:700;color:#E4002B;margin-bottom:3px;">NAB</div>
+                  <div style="font-size:10px;color:#333;line-height:1.4;">Hi! I can see your home loan application has outstanding documents. How can I help?</div>
+                </div>
+                <div style="background:#E4002B;border-radius:10px 10px 2px 10px;padding:8px 10px;max-width:85%;align-self:flex-end;">
+                  <div style="font-size:10px;color:#fff;line-height:1.4;">I uploaded the bank statements. How long will the review take?</div>
+                </div>
+                <div style="background:#fff;border-radius:10px 10px 10px 2px;padding:8px 10px;max-width:85%;border:1px solid #EEE;">
+                  <div style="font-size:9px;font-weight:700;color:#E4002B;margin-bottom:3px;">NAB</div>
+                  <div style="font-size:10px;color:#333;line-height:1.4;">Your banker will review within 2 business days. You'll receive an email when your application progresses. Is there anything else I can help with?</div>
+                </div>
+              </div>
+              <div style="background:#fff;border-top:1px solid #EEE;padding:8px 12px;display:flex;gap:6px;align-items:center;flex-shrink:0;">
+                <div style="flex:1;background:#F5F5F5;border-radius:16px;padding:7px 10px;font-size:10px;color:#999;">Type a message…</div>
+                <div style="background:#E4002B;border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:12px;color:#fff;">↑</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="phone-caption">In-App Chat — Mid-Application<br><span style="font-size:10px;color:var(--muted);">2-business-day review SLA — told via chat, not shown in tracker</span></div>
+        <div class="phone-source">Reconstructed from nab.com.au/help-support chat experience</div>
+      </div>
+
+      <!-- NAB Screen 3: Account nomination -->
+      <div class="phone-wrap">
+        <div class="phone-frame" style="--fclr:#E4002B;">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="phone-status" style="background:#E4002B;color:#fff;"><span>9:41</span><span>●●●</span></div>
+            <div class="app-body" style="background:#F5F5F5;">
+              <div style="background:#E4002B;padding:10px 14px;flex-shrink:0;">
+                <div style="font-size:11px;font-weight:800;color:#fff;">Set Up Repayments</div>
+                <div style="font-size:10px;color:rgba(255,255,255,.8);margin-top:2px;">Home Loan Application</div>
+              </div>
+              <div style="padding:12px;overflow-y:auto;flex:1;">
+                <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:#666;margin-bottom:8px;">Nominate Account</div>
+                <div style="background:#fff;border:1px solid #A5D6A7;border-radius:8px;padding:10px 12px;margin-bottom:8px;">
+                  <div style="display:flex;align-items:center;justify-content:space-between;">
+                    <div>
+                      <div style="font-size:11px;font-weight:700;color:#333;">NAB Classic Banking ••4812</div>
+                      <div style="font-size:10px;color:#666;">$5,200 available</div>
+                    </div>
+                    <div style="background:#E8F5E9;color:#2E7D32;border-radius:6px;padding:3px 8px;font-size:9px;font-weight:700;">Selected ✓</div>
+                  </div>
+                </div>
+                <div style="background:#fff;border:1px solid #EEE;border-radius:8px;padding:10px 12px;margin-bottom:8px;">
+                  <div style="display:flex;align-items:center;justify-content:space-between;">
+                    <div>
+                      <div style="font-size:11px;font-weight:700;color:#333;">NAB iSaver ••7230</div>
+                      <div style="font-size:10px;color:#666;">$18,400 available</div>
+                    </div>
+                    <div style="width:14px;height:14px;border-radius:50%;border:2px solid #EEE;"></div>
+                  </div>
+                </div>
+                <div style="background:#FFF3E0;border:1px solid #FFB300;border-radius:8px;padding:8px 10px;margin-bottom:12px;font-size:10px;color:#E65100;line-height:1.5;">
+                  Non-NAB accounts: Contact your banker to set up a separate direct debit arrangement.
+                </div>
+                <div style="background:#E4002B;border-radius:8px;padding:9px;text-align:center;font-size:11px;font-weight:800;color:#fff;">Confirm Selection</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="phone-caption">Account Nomination — NAB App<br><span style="font-size:10px;color:var(--muted);">NAB accounts prefilled; non-NAB requires separate banker contact</span></div>
+        <div class="phone-source">Reconstructed from nab.com.au home loan process guide</div>
+      </div>
+
+    </div>
+
+    <div class="adh-verdict">
+      <div class="ins-card"><h4>✅ NAB Ad-Hoc Strengths</h4><ul class="ins-list str">
+        <li>In-app chat available for queries — "speak to a person" command well-implemented</li>
+        <li>ubank's real-time tracker (2024) provides milestone notifications, reducing need for manual follow-up</li>
+        <li>NAB account nomination is prefilled in-app — smooth for existing NAB customers</li>
+        <li>Online portal allows upload with two-factor login — secure</li>
+        <li>Banker contacts within 2 business days — consistent SLA</li>
+      </ul></div>
+      <div class="ins-card"><h4>⚠️ NAB Ad-Hoc Gaps</h4><ul class="ins-list gap">
+        <li>30-day application expiry window is shorter than Westpac's 60 days — higher dropout risk</li>
+        <li>No per-document "received" confirmation after upload — customer doesn't know if upload succeeded</li>
+        <li>Non-NAB account nomination requires contacting banker — no digital form</li>
+        <li>NAB Direct tracker is less developed than ubank's real-time tracker — uneven within the same bank</li>
+        <li>No push notification when outstanding condition is added mid-process — relies on email/SMS</li>
+      </ul></div>
+    </div>
+  </div>
+
+  <h3 class="sh"><span class="sh-tag">03</span> Real Product Screenshots</h3>
   <div class="real-shots">
     <p class="real-shots-intro">These are <strong>official images published by NAB</strong> on their public product pages — showing the NAB App's home loan experience, how-to guides, and the visual design of NAB and ubank's digital products.</p>
     <div class="shots-grid">
@@ -1349,16 +2180,452 @@ table.cmp td:first-child { font-weight: 600; font-size: 11px; }
 
 </div><!-- /page -->
 
+<!-- ══════════════════════════════════════════════════════════ -->
+<!--  IN-FLIGHT SUPPORT (new section)                          -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<section class="bank-sec page" id="s-support" style="display:none;">
+
+  <div class="support-intro">
+    <p><strong>What this section covers:</strong> Once a customer submits a home loan application, a new set of needs emerges — questions about the process, requests for status updates, ad-hoc information queries ("What documents do I still need?"), and requests to change or add information mid-flight. This section deep-dives into how each of the Big Four banks handles that <em>in-between</em> phase: from application submitted through to formal approval.</p>
+    <p>The key dimensions examined are: <strong>available contact channels</strong>, <strong>availability hours</strong>, <strong>who the customer speaks to</strong> (AI vs human vs assigned lender), <strong>how context is preserved</strong> across contacts, and <strong>where the biggest CX gaps</strong> sit.</p>
+  </div>
+
+  <!-- ─── COMMBANK ─── -->
+  <div class="bank-support-block">
+    <div class="bank-support-header">
+      <div class="bank-support-logo" style="background:#FFCC00;color:#000;">C</div>
+      <div>
+        <div class="bank-support-title">CommBank</div>
+        <div class="bank-support-subtitle">Most mature multi-channel support — AI + human, always available</div>
+      </div>
+    </div>
+
+    <div class="channel-grid">
+      <div class="channel-card">
+        <div class="channel-icon">🤖</div>
+        <div class="channel-name">Ceba (AI Assistant)</div>
+        <div class="channel-avail">24/7 · Instant</div>
+        <div class="channel-detail">Handles ~70,000+ query types. Can check application status, answer product questions, and escalate to a specialist — with full conversation context passed across. No hold time.</div>
+        <span class="channel-tag tag-best">Best in class</span>
+      </div>
+      <div class="channel-card">
+        <div class="channel-icon">💬</div>
+        <div class="channel-name">In-App Messaging</div>
+        <div class="channel-avail">24/7 submit · Specialist replies during hours</div>
+        <div class="channel-detail">Ceba escalates to a Home Lending Specialist who messages back in-app. Customer gets a notification when replied to — no need to stay in the app. Fully asynchronous.</div>
+        <span class="channel-tag tag-best">Async convenience</span>
+      </div>
+      <div class="channel-card">
+        <div class="channel-icon">📅</div>
+        <div class="channel-name">Specialist Booking</div>
+        <div class="channel-avail">In-app · Expected wait shown</div>
+        <div class="channel-detail">Instant appointment booking in the CommBank App. Shows expected wait times before connecting. Specialist can join via phone, video or in-person. Pre-populated with the customer's application context.</div>
+        <span class="channel-tag tag-best">Wait time shown</span>
+      </div>
+      <div class="channel-card">
+        <div class="channel-icon">📞</div>
+        <div class="channel-name">Phone (13 2224)</div>
+        <div class="channel-avail">Mon–Fri + extended hours</div>
+        <div class="channel-detail">Dedicated home loan phone line. Press 3 for applications in progress. Callers can skip IVR using the in-app call feature (pre-authenticated). Specialist line for new loans: 13 2224.</div>
+        <span class="channel-tag tag-ok">Good but IVR friction</span>
+      </div>
+    </div>
+
+    <h4 style="font-size:13px;font-weight:700;margin-bottom:12px;">How it works at each stage of the application journey</h4>
+    <table class="journey-table">
+      <thead><tr><th>Stage</th><th>Customer Query Type</th><th>CommBank Channel</th><th>Experience Quality</th></tr></thead>
+      <tbody>
+        <tr><td class="td-stage">Pre-submission</td><td>Product questions, eligibility, rate info</td><td>Ceba (AI) 24/7, or specialist booking in-app</td><td class="cell-good">✅ Self-serve or book instantly. No friction.</td></tr>
+        <tr><td class="td-stage">Application in progress</td><td>"What documents do I still need?"</td><td>App Tracker shows per-document status (pending/done). Ceba answers contextually.</td><td class="cell-good">✅ Best document status visibility in market.</td></tr>
+        <tr><td class="td-stage">Awaiting assessment</td><td>"What's the status? When will I hear back?"</td><td>Real-time Application Status Tracker in Buy a Home. Push notifications on milestone changes.</td><td class="cell-good">✅ Proactive. Push + SMS + email.</td></tr>
+        <tr><td class="td-stage">Documents requested</td><td>Bank asks for extra pay slips or bank statements</td><td>In-app notification + action item in tracker. Upload directly in app.</td><td class="cell-good">✅ Seamless in-app upload with per-doc status.</td></tr>
+        <tr><td class="td-stage">Rate negotiation</td><td>"Can I get a lower rate?"</td><td>Book specialist in-app. AI escalates to lender for rate discussion.</td><td class="cell-ok">⚠️ Possible, but requires lender call — no in-app rate negotiation self-serve.</td></tr>
+        <tr><td class="td-stage">Pre-approval update</td><td>"Can I extend or renew my conditional pre-approval?"</td><td>Contact lender or Relationship Manager via app/call. Provide updated income docs.</td><td class="cell-ok">⚠️ Manual — customer must initiate. No proactive reminder.</td></tr>
+        <tr><td class="td-stage">Broker-originated</td><td>Status query on broker-submitted application</td><td>Limited app tracker access for broker apps. Must call or contact broker.</td><td class="cell-gap">❌ Gap — broker customers have reduced digital access.</td></tr>
+      </tbody>
+    </table>
+    <div class="ins-card" style="margin-bottom:0;"><p style="font-size:12px;line-height:1.8;color:var(--muted);"><strong style="color:var(--text);">GenAI push (2024–25):</strong> CommBank announced in late 2024 that Gen AI is being used to pre-populate loan application documents with a customer's own information — cutting rework and enabling conditional approval in under 10 minutes. Annual loan reviews are also being reduced from ~14 hours to ~2 hours with AI assistance. Ceba can now recognise 70,000+ query variations, handling ~60% of all customer contacts end-to-end with no human needed.</p></div>
+  </div>
+
+  <!-- ─── ANZ PLUS ─── -->
+  <div class="bank-support-block">
+    <div class="bank-support-header">
+      <div class="bank-support-logo" style="background:#007DBA;">A</div>
+      <div>
+        <div class="bank-support-title">ANZ Plus</div>
+        <div class="bank-support-subtitle">Human-led Coach model — contextual, warm, but limited to business hours</div>
+      </div>
+    </div>
+
+    <div class="channel-grid">
+      <div class="channel-card">
+        <div class="channel-icon">💬</div>
+        <div class="channel-name">ANZ Plus Coach (In-App Message)</div>
+        <div class="channel-avail">9am–5pm AEST · Business days only</div>
+        <div class="channel-detail">Customers tap "Get Help" anywhere in the application to message an ANZ Plus Coach. Can leave a message anytime; Coaches reply during business hours and send an app notification when done.</div>
+        <span class="channel-tag tag-unique">Human-only · No AI bot</span>
+      </div>
+      <div class="channel-card">
+        <div class="channel-icon">📞</div>
+        <div class="channel-name">Coach Phone Call</div>
+        <div class="channel-avail">Business hours</div>
+        <div class="channel-detail">ANZ Plus Coaches can also be reached by phone for more complex queries. The same Coach team handles both messaging and phone — providing continuity of context across contacts.</div>
+        <span class="channel-tag tag-ok">Hours limited</span>
+      </div>
+      <div class="channel-card">
+        <div class="channel-icon">📹</div>
+        <div class="channel-name">Secure Video Call</div>
+        <div class="channel-avail">Business hours · By arrangement</div>
+        <div class="channel-detail">ANZ Plus is the only Big Four bank offering secure video calls with a lending coach inside the app — a unique capability for complex situations where tone and visual communication matter.</div>
+        <span class="channel-tag tag-unique">Big 4 unique</span>
+      </div>
+      <div class="channel-card">
+        <div class="channel-icon">🔁</div>
+        <div class="channel-name">Contextual In-App Help</div>
+        <div class="channel-avail">24/7 · FAQs + self-serve</div>
+        <div class="channel-detail">Tapping "Get Help" during application surfaces tailored FAQs for the current screen. Customers can self-serve common queries instantly and only escalate when needed. Support tab for all other queries.</div>
+        <span class="channel-tag tag-best">Contextual FAQs</span>
+      </div>
+    </div>
+
+    <h4 style="font-size:13px;font-weight:700;margin-bottom:12px;">Application journey support — ANZ Plus</h4>
+    <table class="journey-table">
+      <thead><tr><th>Stage</th><th>Customer Query Type</th><th>ANZ Plus Channel</th><th>Experience Quality</th></tr></thead>
+      <tbody>
+        <tr><td class="td-stage">Pre-application</td><td>"Am I eligible to refinance?" / "What rate would I get?"</td><td>Explore Loan Options tool in-app with AVM upfront. Refinance calculator. Coach reachable in-app.</td><td class="cell-good">✅ Most transparent pre-application information of Big 4.</td></tr>
+        <tr><td class="td-stage">Application in progress</td><td>"What do I need to provide next?"</td><td>Virtually nothing to provide — credit data, ID and income auto-verified. No document upload queue.</td><td class="cell-good">✅ Best in class — the question barely applies here.</td></tr>
+        <tr><td class="td-stage">ID query</td><td>"My selfie verification failed — what do I do?"</td><td>"Get Help" in-app → contextual FAQ or Coach message. Coach replies same/next day.</td><td class="cell-ok">⚠️ Coach response not instant. 9am–5pm only.</td></tr>
+        <tr><td class="td-stage">Awaiting approval</td><td>"How long will it take?"</td><td>Full progress tracker visible in-app. Most eligible loans approved in minutes — the wait is minimal.</td><td class="cell-good">✅ Speed eliminates most anxiety-driven queries.</td></tr>
+        <tr><td class="td-stage">Complex or unusual case</td><td>Investment property, unusual income structure</td><td>Coach chat, phone or video call — with full context from the application available to Coach.</td><td class="cell-good">✅ Best human support model — video call is a differentiator.</td></tr>
+        <tr><td class="td-stage">After-hours query</td><td>Urgent question at 9pm</td><td>Leave a message for Coach; FAQ self-serve available 24/7. No AI assistant to handle escalation.</td><td class="cell-gap">❌ No 24/7 human or AI escalation path. Coach only 9–5.</td></tr>
+        <tr><td class="td-stage">Scope limitation</td><td>"I'm building a new home, can I apply?"</td><td>Not eligible — ANZ Plus is refinance only, variable rate only, 80% LVR max. Customer must go to ANZ legacy.</td><td class="cell-gap">❌ Major scope gap. New purchases and fixed rates not supported.</td></tr>
+      </tbody>
+    </table>
+    <div class="ins-card" style="margin-bottom:0;"><p style="font-size:12px;line-height:1.8;color:var(--muted);"><strong style="color:var(--text);">The Coach model:</strong> ANZ Plus deliberately avoids AI bots as the primary support layer — all queries go to human Coaches, giving a warmer and more personalised experience. The tradeoff is availability: Coaches only operate 9am–5pm AEST on business days, creating a dead zone for evening and weekend queries. The in-app contextual FAQ "Get Help" system partially mitigates this, but there is no ANZ Plus equivalent of Ceba to handle out-of-hours escalation.</p></div>
+  </div>
+
+  <!-- ─── WESTPAC ─── -->
+  <div class="bank-support-block">
+    <div class="bank-support-header">
+      <div class="bank-support-logo" style="background:#DA1710;">W</div>
+      <div>
+        <div class="bank-support-title">Westpac</div>
+        <div class="bank-support-subtitle">Dedicated assigned lender — strong but portal-fragmented, no AI assistant</div>
+      </div>
+    </div>
+
+    <div class="channel-grid">
+      <div class="channel-card">
+        <div class="channel-icon">👤</div>
+        <div class="channel-name">Assigned Lender</div>
+        <div class="channel-avail">After application submitted · Email & phone</div>
+        <div class="channel-detail">Once application is submitted, Westpac assigns a named lender and emails their details to the customer. This lender handles the application from submission through to settlement — one consistent contact.</div>
+        <span class="channel-tag tag-best">Dedicated lender</span>
+      </div>
+      <div class="channel-card">
+        <div class="channel-icon">💬</div>
+        <div class="channel-name">LiveChat (Application Portal)</div>
+        <div class="channel-avail">8am–8pm Mon–Thu, 8am–6pm Fri, 9am–6pm Sat–Sun</div>
+        <div class="channel-detail">"Need help?" → "Message us now" button within the online application portal and retrieve-application page. Routes to LiveChat agents — not the assigned lender. Available most hours of the day.</div>
+        <span class="channel-tag tag-ok">Portal only — not in-app</span>
+      </div>
+      <div class="channel-card">
+        <div class="channel-icon">📞</div>
+        <div class="channel-name">Phone (132 558)</div>
+        <div class="channel-avail">8am–8pm Mon–Fri, 9am–6pm Sat–Sun</div>
+        <div class="channel-detail">Home loan specialist line. If the assigned lender hasn't been in touch, customers can call to follow up. No in-app call skip — standard IVR authentication required. Historically cited for long wait times.</div>
+        <span class="channel-tag tag-ok">Good hours but IVR wait</span>
+      </div>
+      <div class="channel-card">
+        <div class="channel-icon">📱</div>
+        <div class="channel-name">In-App Chat (Westpac App)</div>
+        <div class="channel-avail">24/7 for general queries</div>
+        <div class="channel-detail">The Westpac App has in-app contact — but this routes to general banking support, NOT to home loan application specialists. Application-specific queries are handled via the separate portal LiveChat.</div>
+        <span class="channel-tag tag-gap">Disconnected from app</span>
+      </div>
+    </div>
+
+    <h4 style="font-size:13px;font-weight:700;margin-bottom:12px;">Application journey support — Westpac</h4>
+    <table class="journey-table">
+      <thead><tr><th>Stage</th><th>Customer Query Type</th><th>Westpac Channel</th><th>Experience Quality</th></tr></thead>
+      <tbody>
+        <tr><td class="td-stage">Pre-submission</td><td>Rate, eligibility, product questions</td><td>Website calculators. Book specialist in-branch, phone, video or mobile visit. 24–48hr callback offer.</td><td class="cell-ok">⚠️ Good specialist access, but no instant AI response.</td></tr>
+        <tr><td class="td-stage">During application</td><td>"I saved my application — where's my link?"</td><td>Application reference number emailed + SMS. Customer returns via retrieve-application page.</td><td class="cell-ok">⚠️ Requires application number — not auto-linked to Westpac App login.</td></tr>
+        <tr><td class="td-stage">Post-submission — status</td><td>"Where is my application? Has it moved?"</td><td>Separate tracker at hlc1.westpac.com.au using Application Number + last name. No in-app tracker.</td><td class="cell-gap">❌ Biggest gap: separate portal, no push notifications, manual lookup.</td></tr>
+        <tr><td class="td-stage">Lender not in contact</td><td>"My lender hasn't called — what do I do?"</td><td>LiveChat "Message us now" via application portal. Or call 132 558.</td><td class="cell-ok">⚠️ Fallback available but requires customer to proactively chase.</td></tr>
+        <tr><td class="td-stage">Additional documents requested</td><td>Bank needs more info mid-assessment</td><td>Lender emails or calls directly. Portal upload for digital applications.</td><td class="cell-ok">⚠️ No in-app notification. Email-based — easy to miss.</td></tr>
+        <tr><td class="td-stage">Conditional approval — extending</td><td>"My pre-approval is expiring — can I extend?"</td><td>Contact lender directly. 90-day conditional approval can be extended another 90 days if financials unchanged.</td><td class="cell-good">✅ 90+90 day window is generous — longest of Big 4.</td></tr>
+        <tr><td class="td-stage">Rate negotiation</td><td>"Can I negotiate my rate before settlement?"</td><td>Lender calls to finalise application — rate negotiation can happen at this point.</td><td class="cell-good">✅ Named lender handles this — good continuity of context.</td></tr>
+      </tbody>
+    </table>
+    <div class="ins-card" style="margin-bottom:0;"><p style="font-size:12px;line-height:1.8;color:var(--muted);"><strong style="color:var(--text);">The dedicated lender model:</strong> Westpac's key differentiator for in-flight support is the assignment of a named, dedicated lender after submission — customers know exactly who to call and email. This creates strong continuity of context. The critical weakness is that this lender relationship only kicks in <em>after</em> submission, and that the application tracker lives in a completely separate web portal from both the Westpac App and the main Westpac Live online banking experience. Customer reviews consistently cite confusion about where to check status and frustration with phone wait times when the lender is unreachable.</p></div>
+  </div>
+
+  <!-- ─── NAB ─── -->
+  <div class="bank-support-block">
+    <div class="bank-support-header">
+      <div class="bank-support-logo" style="background:#E4002B;">N</div>
+      <div>
+        <div class="bank-support-title">NAB</div>
+        <div class="bank-support-subtitle">Secure in-app messaging + phone — solid but split between NAB and ubank models</div>
+      </div>
+    </div>
+
+    <div class="channel-grid">
+      <div class="channel-card">
+        <div class="channel-icon">💬</div>
+        <div class="channel-name">NAB Messaging</div>
+        <div class="channel-avail">Mon–Fri 8am–7pm · Sat–Sun 9am–6pm</div>
+        <div class="channel-detail">Secure in-app and internet banking messaging tool. Customer is pre-authenticated when logged in — no ID re-verification needed. Bankers reply within working hours. Select "Start Conversation" via messaging icon.</div>
+        <span class="channel-tag tag-best">Secure + authenticated</span>
+      </div>
+      <div class="channel-card">
+        <div class="channel-icon">📞</div>
+        <div class="channel-name">Phone (13 22 65)</div>
+        <div class="channel-avail">Mon–Fri 8am–7pm · Sat–Sun 9am–6pm</div>
+        <div class="channel-detail">Dedicated home loan specialist line. Call securely from the NAB App to skip the ID step. Extensive weekend hours are a standout — longer than CommBank's equivalent. Can request call-back to avoid hold.</div>
+        <span class="channel-tag tag-best">Best weekend hours</span>
+      </div>
+      <div class="channel-card">
+        <div class="channel-icon">📅</div>
+        <div class="channel-name">Appointment Booking</div>
+        <div class="channel-avail">Phone / video / in-branch / mobile banker</div>
+        <div class="channel-detail">Book a home loan expert appointment online. Choice of phone call, video, in-branch visit, or NAB mobile banker comes to you. 24-48hr booking confirmation. Supports pre-application and in-flight queries.</div>
+        <span class="channel-tag tag-ok">All channels covered</span>
+      </div>
+      <div class="channel-card">
+        <div class="channel-icon">🏦</div>
+        <div class="channel-name">Branch + Mobile Banker</div>
+        <div class="channel-avail">Branch hours · Mobile banker flexible</div>
+        <div class="channel-detail">Customers can visit any NAB branch for home loan support. For complex queries (e.g. document re-submissions, income verification issues), a mobile banker can come to the customer's location — unique in the Big 4.</div>
+        <span class="channel-tag tag-unique">Mobile banker visits</span>
+      </div>
+    </div>
+
+    <h4 style="font-size:13px;font-weight:700;margin-bottom:12px;">Application journey support — NAB</h4>
+    <table class="journey-table">
+      <thead><tr><th>Stage</th><th>Customer Query Type</th><th>NAB Channel</th><th>Experience Quality</th></tr></thead>
+      <tbody>
+        <tr><td class="td-stage">Pre-submission</td><td>Eligibility, product choice, rate enquiry</td><td>Book specialist (phone/video/in-person). Secure call from app. Website calculators.</td><td class="cell-ok">⚠️ Good channels but no AI instant-response for general queries.</td></tr>
+        <tr><td class="td-stage">Application in progress</td><td>"Can I save and come back?"</td><td>30-day window to complete. NAB ID + 6-digit SMS to resume. Save and return link emailed.</td><td class="cell-ok">⚠️ 30-day expiry is shorter than Westpac's 60-day window.</td></tr>
+        <tr><td class="td-stage">Status query (NAB Direct)</td><td>"Where is my application?"</td><td>Web-based tracker — log in with NAB ID. Less real-time than CommBank. No push notifications.</td><td class="cell-ok">⚠️ Functional but passive — customer must check, not notified.</td></tr>
+        <tr><td class="td-stage">Status query (ubank)</td><td>"Where is my application?" (ubank customers)</td><td>Real-time in-app tracker with milestone notifications. Launched H2 2024. Broker-visible too.</td><td class="cell-good">✅ ubank tracker rivals CommBank — milestone push notifications.</td></tr>
+        <tr><td class="td-stage">Documents requested</td><td>Bank needs extra payslip, bank statement</td><td>Banker contacts within 2 business days. Upload via online portal. No in-app per-document status.</td><td class="cell-ok">⚠️ Less visible doc status than CommBank. No real-time doc-level tracking.</td></tr>
+        <tr><td class="td-stage">Complex query mid-flight</td><td>"I changed jobs mid-application — what happens?"</td><td>NAB Messaging (in-app) or call 13 22 65. Specialist available Mon–Fri 8am–7pm, Sat–Sun 9am–6pm.</td><td class="cell-good">✅ Best weekend specialist hours of Big 4. Secure messaging convenient.</td></tr>
+        <tr><td class="td-stage">Escalation</td><td>Unhappy with processing speed or decision</td><td>NAB Messaging, complaint form online, or feedback line. AFCA referral information provided.</td><td class="cell-ok">⚠️ Standard escalation path, not differentiated.</td></tr>
+      </tbody>
+    </table>
+    <div class="ins-card" style="margin-bottom:0;"><p style="font-size:12px;line-height:1.8;color:var(--muted);"><strong style="color:var(--text);">NAB's split model:</strong> The in-flight support experience is meaningfully different depending on whether you're a NAB Direct or ubank customer. NAB Direct customers get solid but relatively passive support — functional messaging and phone, but a less proactive tracker. ubank customers (post-H2 2024) get a real-time milestone tracker and a faster decisioning engine targeting 2-day approval. NAB's standout is its <strong>weekend phone hours</strong> (9am–6pm Sat–Sun with home loan specialists) — the longest of any Big Four bank — and the fact that callers can skip ID verification by calling securely from the NAB app.</p></div>
+  </div>
+
+  <!-- ─── AD-HOC COMPARISON ─── -->
+  <h3 class="sh"><span class="sh-tag">05</span> Ad-Hoc Requests — Cross-Bank Comparison</h3>
+  <div style="overflow-x:auto;margin-bottom:32px;">
+    <table class="cmp-table" style="width:100%;font-size:11px;">
+      <thead>
+        <tr>
+          <th>Capability</th>
+          <th style="color:#FFCC00;">CommBank</th>
+          <th style="color:var(--anz);">ANZ Plus</th>
+          <th style="color:var(--wbc);">Westpac</th>
+          <th style="color:var(--nab);">NAB</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-stage">Ad-hoc notification channel</td>
+          <td class="cell-ok">✅ Push + SMS + email</td>
+          <td class="cell-ok">✅ In-app push (app-first)</td>
+          <td class="cell-warn">⚠️ Phone + email only — no push</td>
+          <td class="cell-warn">⚠️ SMS + email — limited push</td>
+        </tr>
+        <tr>
+          <td class="td-stage">Document request surfaced in-app</td>
+          <td class="cell-ok">✅ Action banner in App Tracker</td>
+          <td class="cell-ok">✅ Inline prompt with context</td>
+          <td class="cell-warn">⚠️ Web portal only — not Westpac App</td>
+          <td class="cell-warn">⚠️ NAB web portal — not NAB App</td>
+        </tr>
+        <tr>
+          <td class="td-stage">Per-document upload status</td>
+          <td class="cell-ok">✅ Pending / Received — real-time</td>
+          <td class="cell-ok">✅ Not needed — fully automated</td>
+          <td class="cell-warn">⚠️ Portal shows status but not real-time</td>
+          <td class="cell-warn">⚠️ Limited — no immediate confirmation</td>
+        </tr>
+        <tr>
+          <td class="td-stage">Reason given for extra document</td>
+          <td class="cell-warn">⚠️ Label only — no explanation</td>
+          <td class="cell-ok">✅ Plain language in-context explanation</td>
+          <td class="cell-warn">⚠️ Specialist explains by phone</td>
+          <td class="cell-warn">⚠️ Banker explains by email/phone</td>
+        </tr>
+        <tr>
+          <td class="td-stage">Third-party document delegation</td>
+          <td class="cell-no">✗ Not available</td>
+          <td class="cell-ok">✅ Coach can assist directly</td>
+          <td class="cell-ok">✅ Nominate accountant/broker in portal</td>
+          <td class="cell-no">✗ Not available digitally</td>
+        </tr>
+        <tr>
+          <td class="td-stage">Review SLA shown to customer</td>
+          <td class="cell-warn">⚠️ Contract review SLA only (6hrs)</td>
+          <td class="cell-ok">✅ Not needed — auto-approved in minutes</td>
+          <td class="cell-no">✗ No SLA communicated to customer</td>
+          <td class="cell-warn">⚠️ "Within 2 business days" via banker</td>
+        </tr>
+        <tr>
+          <td class="td-stage">Account nomination — own bank</td>
+          <td class="cell-ok">✅ Prefilled in-app — instant</td>
+          <td class="cell-ok">✅ ANZ Plus Everyday auto-selected</td>
+          <td class="cell-ok">✅ Westpac account — app / online banking</td>
+          <td class="cell-ok">✅ NAB account prefilled in-app</td>
+        </tr>
+        <tr>
+          <td class="td-stage">Account nomination — external bank</td>
+          <td class="cell-warn">⚠️ PDF Direct Debit form required</td>
+          <td class="cell-no">✗ ANZ Plus accounts only</td>
+          <td class="cell-warn">⚠️ PDF Direct Debit form required</td>
+          <td class="cell-warn">⚠️ Requires separate banker contact</td>
+        </tr>
+        <tr>
+          <td class="td-stage">Contract of Sale upload channel</td>
+          <td class="cell-ok">✅ In-app via Buy a Home — 6hr review SLA</td>
+          <td class="cell-ok">✅ Not required — auto valuation done upfront</td>
+          <td class="cell-warn">⚠️ Digital application portal (separate web)</td>
+          <td class="cell-warn">⚠️ Online portal upload</td>
+        </tr>
+        <tr>
+          <td class="td-stage">Human support during condition resolution</td>
+          <td class="cell-ok">✅ 24/7 chat + instant callback booking</td>
+          <td class="cell-ok">✅ Coach chat + phone + video call</td>
+          <td class="cell-ok">✅ Dedicated loan specialist — consistent point of contact</td>
+          <td class="cell-ok">✅ In-app chat + banker callback</td>
+        </tr>
+        <tr>
+          <td class="td-stage">Application expiry after inactivity</td>
+          <td class="cell-ok">✅ Fully resumable — no public expiry window</td>
+          <td class="cell-ok">✅ Save and resume — no fixed expiry stated</td>
+          <td class="cell-warn">⚠️ 60-day window</td>
+          <td class="cell-warn">⚠️ 30-day window — highest dropout risk</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ─── COMPARATIVE ANALYSIS ─── -->
+  <h3 class="sh"><span class="sh-tag">06</span> Comparative Verdicts — In-Flight Support</h3>
+  <div class="verdict-row">
+    <div class="verdict-card">
+      <div class="verdict-bank" style="color:#92700A;">CommBank</div>
+      <div class="verdict-score" style="color:#FFCC00;">9.0</div>
+      <div class="verdict-label">/ 10 · In-Flight Support</div>
+      <div class="verdict-best">Best overall. 24/7 AI + async human messaging. Per-document status. Push notifications. Only gap: broker-originated applications.</div>
+    </div>
+    <div class="verdict-card">
+      <div class="verdict-bank" style="color:var(--anz);">ANZ Plus</div>
+      <div class="verdict-score" style="color:var(--anz);">8.2</div>
+      <div class="verdict-label">/ 10 · In-Flight Support</div>
+      <div class="verdict-best">Warmest support model — human Coaches, video call unique in Big 4. Biggest gap: 9–5 only, no after-hours AI fallback. Speed of approval reduces query volume naturally.</div>
+    </div>
+    <div class="verdict-card">
+      <div class="verdict-bank" style="color:var(--wbc);">Westpac</div>
+      <div class="verdict-score" style="color:var(--wbc);">6.5</div>
+      <div class="verdict-label">/ 10 · In-Flight Support</div>
+      <div class="verdict-best">Dedicated named lender is excellent once assigned. Critical gap: application tracker lives in a separate portal, no push notifications, LiveChat disconnected from the banking app.</div>
+    </div>
+    <div class="verdict-card">
+      <div class="verdict-bank" style="color:var(--nab);">NAB</div>
+      <div class="verdict-score" style="color:var(--nab);">7.5</div>
+      <div class="verdict-label">/ 10 · In-Flight Support</div>
+      <div class="verdict-best">Best weekend support hours. Secure in-app messaging convenient. ubank customers get real-time tracker. NAB Direct tracker is passive. Document status visibility weaker than CommBank.</div>
+    </div>
+  </div>
+
+  <h3 class="sh"><span class="sh-tag">07</span> Key Pain Points by Bank</h3>
+  <div class="pain-grid">
+    <div class="pain-card">
+      <div class="pain-bank" style="color:#92700A;">CommBank — Pain Points</div>
+      <ul class="pain-list">
+        <li>Broker-originated applications lose access to full in-app tracker — significant channel inconsistency</li>
+        <li>Pre-approval renewal requires manual initiation — no proactive "your approval expires in 14 days" reminder</li>
+        <li>Joint applicants must both be independently registered in the app — adds setup friction for couples</li>
+        <li>Ceba handles ~60% of queries end-to-end — but complex home loan queries still require specialist and wait times vary</li>
+        <li>No self-serve rate negotiation tool — requires a phone or in-person conversation with a specialist</li>
+      </ul>
+    </div>
+    <div class="pain-card">
+      <div class="pain-bank" style="color:var(--anz);">ANZ Plus — Pain Points</div>
+      <ul class="pain-list">
+        <li>Coach support limited to 9am–5pm AEST on business days — no after-hours AI escalation fallback</li>
+        <li>Refinance-only scope (no new purchases, no fixed rate) means many customers can't use ANZ Plus at all</li>
+        <li>Only available in 6 states — TAS and NT customers excluded entirely from ANZ Plus home loan</li>
+        <li>ANZ Plus is siloed from legacy ANZ — existing ANZ Internet Banking customers cannot see ANZ Plus loans</li>
+        <li>Coach response is "not always same day" — asynchronous model requires patience for urgent queries</li>
+      </ul>
+    </div>
+    <div class="pain-card">
+      <div class="pain-bank" style="color:var(--wbc);">Westpac — Pain Points</div>
+      <ul class="pain-list">
+        <li>Application tracker in a completely separate portal (hlc1.westpac.com.au) — not integrated into Westpac App or Westpac Live</li>
+        <li>Requires Application Number + last name to access tracker — not auto-linked to authenticated session</li>
+        <li>No proactive push notifications during assessment phase — customer must actively check for progress</li>
+        <li>LiveChat (for in-flight queries) is inside the application portal only — not accessible from Westpac App</li>
+        <li>Customer reviews cite long phone hold times (sometimes 1–3hrs) and difficulty reaching assigned lender</li>
+        <li>CDR/Open Banking only available via broker channel — direct customers don't benefit from auto-verification</li>
+      </ul>
+    </div>
+    <div class="pain-card">
+      <div class="pain-bank" style="color:var(--nab);">NAB — Pain Points</div>
+      <ul class="pain-list">
+        <li>Split experience between NAB and ubank — different tracker quality, different brand, inconsistent customer journey</li>
+        <li>NAB Direct tracker is web-based and passive — no milestone push notifications for NAB Direct customers</li>
+        <li>30-day application expiry shorter than Westpac's 60-day window — more pressure on customers in slow property markets</li>
+        <li>Document status less transparent than CommBank — no per-document pending/done status visible in-app</li>
+        <li>No AI virtual assistant for instant query handling — NAB Messaging requires waiting for a human banker to reply</li>
+        <li>ubank real-time tracker still expanding to new purchase customers — initially refinance-focused only</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 class="sh"><span class="sh-tag">08</span> Design Opportunities — In-Flight Support</h3>
+  <div class="opp-support-grid">
+    <div class="opp-card"><div class="opp-n">07</div><div class="opp-t">AI Triage with Human Warm Handoff</div><div class="opp-d">ANZ Plus's human-first model is warm but limited in hours. CommBank's AI is available 24/7 but can feel cold. The opportunity is an AI layer that handles FAQs at any hour and seamlessly escalates to a named coach with full context — not a generic agent pool.</div></div>
+    <div class="opp-card"><div class="opp-n">08</div><div class="opp-t">Proactive Application ETA</div><div class="opp-d">None of the Big 4 tell customers "your application is typically approved within 2 business days from this point." Showing a real-time ETA bar ("We're working on it — typically done by Thursday") would dramatically reduce status-query calls and anxiety.</div></div>
+    <div class="opp-card"><div class="opp-n">09</div><div class="opp-t">Application Support Unified Across Channels</div><div class="opp-d">Westpac's application portal LiveChat is completely disconnected from the Westpac App. The ideal state is a single thread of communication — whether initiated in the app, the portal or via phone — visible in one place, with full history.</div></div>
+    <div class="opp-card"><div class="opp-n">10</div><div class="opp-t">Proactive Pre-Approval Expiry Reminders</div><div class="opp-d">CommBank's conditional pre-approval doesn't send a proactive "expires in 14 days" push notification. All four banks miss this moment — a high-anxiety touchpoint for customers still searching for property that is easy to design proactively.</div></div>
+    <div class="opp-card"><div class="opp-n">11</div><div class="opp-t">Contextual Document Request Explanations</div><div class="opp-d">When a bank requests additional documents mid-assessment, customers often don't understand why. An in-app explanation ("We need your last 3 payslips because X") with a direct upload link would reduce friction and improve document quality — reducing re-requests.</div></div>
+    <div class="opp-card"><div class="opp-n">12</div><div class="opp-t">Broker + Direct Parity</div><div class="opp-d">CommBank tracker access is limited for broker-originated applications. Westpac's broker CDR advantage doesn't pass through to direct customers. There is a clear opportunity to build a tracker experience that works identically regardless of origination channel.</div></div>
+  </div>
+
+  <div class="footnote">
+    <strong>Sources for In-Flight Support section:</strong> commbank.com.au/support/messaging.html · commbank.com.au/home-loans/commbank-home-buying-hub.html · commbank.com.au/articles/newsroom/2024/11/reimagining-banking-nov24.html · anz.com.au/plus/support/feedback-complaints/contacting-support · anz.com.au/plus/digital-home-loans · westpac.com.au/personal-banking/home-loans/how-to-apply · westpac.com.au/personal-banking/home-loans/retrieve-application · westpac.com.au/contact-us/personal-contacts · nab.com.au/contact-us/nab-messaging · nab.com.au/contact-us/personal/home-loans · nab.com.au/contact-us/call-from-app · Nuance (Ceba case study, 2023) · Hunter Galloway Westpac Home Loan Review 2026 · Trustpilot Westpac reviews (March 2026) · Canstar Big 4 comparison April 2025 · savings.com.au fast home loan approval times (March 2024)
+  </div>
+
+</section>
+
+</div><!-- /page -->
+
 <div class="fab" id="fab" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ Top</div>
 
 <script>
 function sw(b) {
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('on'));
-  document.querySelectorAll('.bank-sec').forEach(s => s.classList.remove('on'));
+  document.querySelectorAll('.bank-sec').forEach(s => {
+    s.classList.remove('on');
+    s.style.display = 'none';
+  });
   document.querySelector(`[data-b="${b}"]`).classList.add('on');
-  document.getElementById(`s-${b}`).classList.add('on');
+  const sec = document.getElementById(`s-${b}`);
+  sec.classList.add('on');
+  sec.style.display = 'block';
   document.getElementById('bNav').scrollIntoView({behavior:'smooth'});
 }
+// Initial state — show first section
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.bank-sec').forEach(s => s.style.display = 'none');
+  document.getElementById('s-cba').style.display = 'block';
+});
 window.addEventListener('scroll', () => {
   document.getElementById('fab').classList.toggle('vis', window.scrollY > 500);
 });
